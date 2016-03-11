@@ -1,0 +1,42 @@
+.form-control {
+    margin-bottom: 15px !important;
+    max-width: 20%;
+    min-width: 150px;
+}
+
+.container {
+    margin-top: 20px !important;
+}
+
+#list_title {
+    font-size: 20px;
+    color: white !important;
+    font-weight: bolder;
+}
+
+.well {
+    margin-top: 5px;
+    background-color: black;
+    color: white;
+}
+
+.right {
+    float: right;
+}
+
+body {
+        background-image: url(http://citationgurus.com/wp-content/uploads/2014/11/backgrounds-background-hd-wallpaper-02-download-widescreen-high-resolution-wallpaper.jpg);
+
+}
+
+.container .well {
+        background-image: url(http://citationgurus.com/wp-content/uploads/2014/11/backgrounds-background-hd-wallpaper-02-download-widescreen-high-resolution-wallpaper.jpg);
+
+}
+
+#category {
+    color: black;
+}
+#reset {
+    margin-bottom: 5px !important;
+}
