@@ -45,3 +45,6 @@ body {
         max-width: 100%;
     }
 }
+#home_link {
+    margin-right: 10px;
+}

@@ -66,72 +66,105 @@ $(document).ready(function(){
             var percent_by_type = function(){
                 if (type_id == 1) {
                     
-                    site_work_share = 0.09;
-                    foundation_share = 0.08;
-                    framing_share = 0.21;
-                    exterior_finishes_share = 0.12;
-                    major_systems_share = 0.14;
-                    interior_finishes_share = 0.31;
-                    final_steps_share = 0.05;
+                    
                     type_title = "Major Renovation";
                     
                     if (finish_id == 1){
-                        
+                        site_work_share = 0.08;
+                        foundation_share = 0.07;
+                        framing_share = 0.20;
+                        exterior_finishes_share = 0.11;
+                        major_systems_share = 0.13;
+                        interior_finishes_share = 0.37;
+                        final_steps_share = 0.04;
                         cost_per_sqft = 140.00;
                         markup_factor = 1.20;
                         margin = 20;
                     } else if (finish_id == 2){
+                        site_work_share = 0.085;
+                        foundation_share = 0.075;
+                        framing_share = 0.205;
+                        exterior_finishes_share = 0.115;
+                        major_systems_share = 0.135;
+                        interior_finishes_share = 0.34;
+                        final_steps_share = 0.045;
                         cost_per_sqft = 120.00;
                         markup_factor = 1.20;
                         margin = 20;
                     } else if (finish_id == 3){
+                        site_work_share = 0.09;
+                        foundation_share = 0.08;
+                        framing_share = 0.21;
+                        exterior_finishes_share = 0.12;
+                        major_systems_share = 0.14;
+                        interior_finishes_share = 0.31;
+                        final_steps_share = 0.05;
                         cost_per_sqft = 100.00;
                         markup_factor = 1.20;
                         margin = 20;
                     }
                     
                 } else if ( type_id == 2) {
-                    site_work_share = 0.05;
-                    foundation_share = 0.05;
-                    framing_share = 0.21;
-                    exterior_finishes_share = 0.10;
-                    major_systems_share = 0.18;
-                    interior_finishes_share = 0.39;
-                    final_steps_share = 0.01;
+                    
                     type_title = "Addition";
                     if ( finish_id == 1 ){
+                        site_work_share = 0.05;
+                        foundation_share = 0.05;
+                        framing_share = 0.21;
+                        exterior_finishes_share = 0.10;
+                        major_systems_share = 0.18;
+                        interior_finishes_share = 0.39;
+                        final_steps_share = 0.01;
                         cost_per_sqft = 150.00;
                         markup_factor = 1.20;
                         margin = 20;
                     } else if ( finish_id == 2 ) {
+                        site_work_share = 0.045;
+                        foundation_share = 0.045;
+                        framing_share = 0.205;
+                        exterior_finishes_share = 0.095;
+                        major_systems_share = 0.175;
+                        interior_finishes_share = 0.36;
+                        final_steps_share = 0.005;
                         cost_per_sqft = 140.00;
                         markup_factor = 1.20;
                         margin = 20;
                     } else if (finish_id == 3 ){
+                        site_work_share = 0.04;
+                        foundation_share = 0.04;
+                        framing_share = 0.20;
+                        exterior_finishes_share = 0.09;
+                        major_systems_share = 0.17;
+                        interior_finishes_share = 0.33;
+                        final_steps_share = 0.005;
                         cost_per_sqft = 130.00;
                         markup_factor = 1.20;
                         margin = 20;
                     }
                 } else if ( type_id == 3 ) {
-                    site_work_share = 0.04;
-                    foundation_share = 0.05;
-                    framing_share = 0.13;
-                    exterior_finishes_share = 0.14;
-                    major_systems_share = 0.22;
-                    interior_finishes_share = 0.40;
-                    final_steps_share = 0.01;
+                    
                     type_title = "Remodel";
+                    site_work_share = 0.025;
+                    foundation_share = 0.025;
+                    framing_share = 0.025;
+                    exterior_finishes_share = 0.20;
+                    major_systems_share = 0.25;
+                    interior_finishes_share = 0.45;
+                    final_steps_share = 0.025;
                     
                     if ( finish_id == 1 ) {
+                        
                         cost_per_sqft = 130.00;
                         markup_factor = 1.25;
                         margin = 25;
                     } else if (finish_id == 2) {
-                        cost_per_sqft = 115.00;
+                        
+                        cost_per_sqft = 110.00;
                         markup_factor = 1.25;
                         margin = 25;
                     } else if (finish_id == 3) {
-                        cost_per_sqft = 100.00;
+                        
+                        cost_per_sqft = 90.00;
                         markup_factor = 1.25;
                         margin = 25;
                     }
