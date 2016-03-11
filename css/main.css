@@ -1,6 +1,6 @@
 .form-control {
     margin-bottom: 15px !important;
-    max-width: 20%;
+    max-width: 50%;
     min-width: 150px;
 }
 
@@ -39,4 +39,9 @@ body {
 }
 #reset {
     margin-bottom: 5px !important;
+}
+@media screen and (max-width: 500px){
+    .form-control {
+        max-width: 100%;
+    }
 }

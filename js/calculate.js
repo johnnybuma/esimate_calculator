@@ -49,14 +49,23 @@ $(document).ready(function(){
             //Get Job Type Id From Dropdown
             var type_id = $('#job_type option:selected').val();
             var type_name = $('#job_type option:selected').text();
+        
+            //Get Finish Quality From Dropdown
+            var finish_id = $('#finish_quality option:selected').val();
+            var finish_name = $('#finish_quality option:selected').text();
+            
+        
             console.log(type_id);
             var cost_per_sqft;
             var markup_factor;
             var general_conditions_factor = 0.15;
             var management_fee_factor = 0.60;
             var profit_factor = 0.20;
+        
+            
             var percent_by_type = function(){
                 if (type_id == 1) {
+                    
                     site_work_share = 0.09;
                     foundation_share = 0.08;
                     framing_share = 0.21;
@@ -65,9 +74,22 @@ $(document).ready(function(){
                     interior_finishes_share = 0.31;
                     final_steps_share = 0.05;
                     type_title = "Major Renovation";
-                    cost_per_sqft = 140.00;
-                    markup_factor = 1.20;
-                    margin = 20;
+                    
+                    if (finish_id == 1){
+                        
+                        cost_per_sqft = 140.00;
+                        markup_factor = 1.20;
+                        margin = 20;
+                    } else if (finish_id == 2){
+                        cost_per_sqft = 120.00;
+                        markup_factor = 1.20;
+                        margin = 20;
+                    } else if (finish_id == 3){
+                        cost_per_sqft = 100.00;
+                        markup_factor = 1.20;
+                        margin = 20;
+                    }
+                    
                 } else if ( type_id == 2) {
                     site_work_share = 0.05;
                     foundation_share = 0.05;
@@ -77,9 +99,19 @@ $(document).ready(function(){
                     interior_finishes_share = 0.39;
                     final_steps_share = 0.01;
                     type_title = "Addition";
-                    cost_per_sqft = 150.00;
-                    markup_factor = 1.20;
-                    margin = 20;
+                    if ( finish_id == 1 ){
+                        cost_per_sqft = 150.00;
+                        markup_factor = 1.20;
+                        margin = 20;
+                    } else if ( finish_id == 2 ) {
+                        cost_per_sqft = 140.00;
+                        markup_factor = 1.20;
+                        margin = 20;
+                    } else if (finish_id == 3 ){
+                        cost_per_sqft = 130.00;
+                        markup_factor = 1.20;
+                        margin = 20;
+                    }
                 } else if ( type_id == 3 ) {
                     site_work_share = 0.04;
                     foundation_share = 0.05;
@@ -89,9 +121,21 @@ $(document).ready(function(){
                     interior_finishes_share = 0.40;
                     final_steps_share = 0.01;
                     type_title = "Remodel";
-                    cost_per_sqft = 130.00;
-                    markup_factor = 1.25;
-                    margin = 25;
+                    
+                    if ( finish_id == 1 ) {
+                        cost_per_sqft = 130.00;
+                        markup_factor = 1.25;
+                        margin = 25;
+                    } else if (finish_id == 2) {
+                        cost_per_sqft = 115.00;
+                        markup_factor = 1.25;
+                        margin = 25;
+                    } else if (finish_id == 3) {
+                        cost_per_sqft = 100.00;
+                        markup_factor = 1.25;
+                        margin = 25;
+                    }
+                    
                 }
             }
             percent_by_type();
@@ -155,7 +199,7 @@ $(document).ready(function(){
             var final_steps_comma = addit(final_steps);
 
             $('#list').append('<hr>');
-            $('#list').append('<span style="font-weight:bold; font-size: 24px">' + type_name + ' @ $' + final_sqft + '-sf including ' + margin + '% mark-up</span><hr>');
+            $('#list').append('<span style="font-weight:bold; font-size: 24px">' + finish_name + ' ' + type_name + ' @ $' + final_sqft + '-sf including ' + margin + '% mark-up</span><hr>');
             $('#list').append('<div class="well"><span style="font-weight: bold; font-size: 24px;"></span><ul><li>Our Cost: <span class="right">$' + cost_comma + '</span><ul><li>Cost-sf: <span class="right">$' + cost_per_sqft + '</span></li></ul></li><hr><li>Mark-up: <span class="right">$'  + markup_comma + '</span><hr><ul><li>Overhead: <span class="right">$' + management_fee_comma + '</span></li><li>Profit: <span class="right">$' + profit_comma + '</span></li><li>General Conditions: <span class="right">$' + general_conditions_comma + '</span></li><li>Design Fee: <span class="right">$' + design_fee_comma + '</span></li></ul></li><hr><li>Client Cost: <span class="right">$' + total_cost_comma + '</span></li><hr></ul></div>');
             $('#list').append('Site Work: <span class="right">$' + site_work_comma + '</span>');
             $('#list').append('<hr>');
